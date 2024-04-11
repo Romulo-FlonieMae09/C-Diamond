@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int rows, a, b, c;
+    
+    cout << "Enter number of rows: ";
+    cin >> rows;
+    c = rows - 1; 
+    
+    
+    for (a = 1; a <= rows; a++){
+        
+        for(b = 1; b <= c ; b++)
+            cout << " ";
+        c--;
+        
+        for (b = 1; b <= (2 * a - 1); b++)
+            cout << "*";
+        cout << endl;
+    }
+    
+    c = 1;
+    for (a = 1; a <= (rows - 1); a++){
+        for(b = 1; b <= c ; b++)
+            cout << " ";
+        c++;
+        
+        for (b = 1; b <= (2 * (rows - a)- 1); b++)
+            cout << "*";
+        cout << endl;
+    }
+
+    return 0;
+}
